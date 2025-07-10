@@ -1,3 +1,5 @@
+![License: MIT]
+(https://img.shields.io/badge/License-MIT-yellow.svg)
 # ⏰ Object Photo-Based Alarm Clock
 
 This Python alarm app only turns off when you show the *same object photo* that was saved before the alarm!
