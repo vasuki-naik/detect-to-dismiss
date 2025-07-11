@@ -1,86 +1,109 @@
-![License: MIT]
-🛏️ Photo Alarm Clock ⏰📸
+# 🛏️ Photo Alarm Clock ⏰📸  
+> A fun and effective alarm clock that *refuses to snooze* until it sees proof you're awake!
 
-A fun and effective alarm clock for lazy people who can't stop snoozing!
-🔥 What Is It?
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](#)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-green)](#)
 
-Photo Alarm Clock is a Python-based smart alarm system that won’t turn off until you re-upload a photo of a specific object (like your toothbrush, water bottle, or even your face 😅). This motivates you to get out of bed and prove you’re up — no more lazy snoozing!
+---
 
-    Think of it as your alarm’s way of saying, "I’ll believe you’re awake when I see proof!"
+## 📌 About the Project
 
-🧠 Key Features
+**Photo Alarm Clock** is a smart, Python-powered alarm system designed to wake up even the laziest of sleepers.  
+Instead of just tapping "Snooze", users must **recreate a photo of a chosen object** — only then will the alarm stop ringing.
 
-    ⏰ Custom Alarm Time — Set your desired wake-up time
+> Think of it as your alarm saying: “I’ll believe you're awake when you prove it!”
 
-    📸 Capture a Reference Object — Take a photo when setting the alarm
+---
 
-    🚫 No Dismiss Until Matched — Alarm rings continuously until a live photo matches the original one
+## 🧠 Key Features
 
-    🤖 Computer Vision Powered — Uses ORB feature detection to compare images
+- ⏰ **Custom Alarm Time** — Set any time to trigger the alarm  
+- 📸 **Reference Photo Capture** — Take a photo of any object (like a toothbrush or bottle)  
+- 🔄 **Image Matching Required to Dismiss** — Must upload a matching image to stop the alarm  
+- 🤖 **Computer Vision-Powered** — Uses ORB feature detection for accurate photo comparison  
+- 🔊 **Looping Alarm Sound** — Alarm continues until a valid photo is matched
 
-    🎵 Looping Alarm Sound — Keeps ringing until the match is confirmed
+---
 
-💻 Technologies Used
+## 💻 Tech Stack
 
-    Python 🐍
+| Tool | Purpose |
+|------|---------|
+| **Python** | Core programming |
+| **OpenCV** | Webcam, photo capture, and image matching |
+| **Pygame** | Alarm sound playback |
+| **ORB Algorithm** | Feature-based image recognition |
 
-    OpenCV (cv2) 📷
+---
 
-    Pygame 🎵
+## 🚀 How It Works
 
-    ORB (Oriented FAST and Rotated BRIEF) for image matching
+1. **Set your alarm time** via input prompt
+2. **Capture a reference image** of any object
+3. At the alarm time, a loud alarm begins playing
+4. To stop it, **you must take a new photo of the same object**
+5. The new photo is compared using feature-matching. Only a **successful match** stops the alarm
 
-🚀 How It Works
+---
 
-    Set Alarm Time — Enter the time you want the alarm to ring.
+## 🖼️ Example Use Case
 
-    Take a Reference Photo — Point your webcam to an object and press 's' to save it.
+Imagine you set your **toothbrush** as the reference.  
+Next morning, the alarm rings → you **go to the bathroom**, show the same toothbrush to the webcam → the alarm turns off ✅
 
-    Wait for Alarm — The program waits until the set time.
+You're out of bed and on your way — no lazy snoozing!
 
-    Alarm Rings — You must take a live photo of the same object.
+---
 
-    Matching Process — If the photos match (using ORB features), the alarm turns off. If not, try again!
+## 🛠️ How to Run It Locally
 
-🖼️ Example Use Case
+```bash
+# Clone this repository
+git clone https://github.com/vasuki-naik/detect-to-dismiss.git
+cd detect-to-dismiss
 
-Set your toothbrush as the reference object. In the morning, go to the bathroom, show your toothbrush to the camera — only then does the alarm stop. You’re already half-ready for the day!
-🛠️ How to Run It
-
-    Clone this repo
-
-git clone https://github.com/your-username/photo-alarm-clock.git
-cd photo-alarm-clock
-
-Install dependencies
-
+# Install required packages
 pip install opencv-python pygame
 
-Make sure you have a .mp3 alarm sound file named alarm_sound.mp3 in the same directory.
+# Make sure alarm_sound.mp3 is in the same folder
 
-Run the program
-
-    python alarm.py
+# Run the program
+python alarm.py
 
 ⚠️ Notes
 
-    Works best in consistent lighting. Try not to change the object's background too much.
+    Ensure consistent lighting for better image matching.
 
-    Match thresholds (match_ratio > 0.2 and good_matches > 40) can be adjusted depending on your object.
+    Avoid background clutter or drastic object movement.
 
-🎯 Future Improvements
+    You can tweak these match thresholds:
 
-    GUI version with buttons and timers
+        match_ratio > 0.2
 
-    Face recognition-based wake-up
+        good_matches > 40
 
-    Mobile version using camera and alarm APIs
+💡 Skills Demonstrated
 
-    Cloud sync to track your waking habits
+    Real-time image processing
 
-🤝 Contributing
+    Computer vision with ORB feature matching
 
-Pull requests are welcome! Feel free to open issues for suggestions or bugs.
+    Webcam and audio device handling
+
+    User interaction logic
+
+    Problem-solving and creative thinking
+
+📈 Future Enhancements
+
+    ✅ Mobile app version using Flutter or Kotlin
+
+ 🤝 Contributing
+
+Contributions are welcome!
+Feel free to open an issue or submit a pull request.
+
 📜 License
 
 This project is licensed under the MIT License.
