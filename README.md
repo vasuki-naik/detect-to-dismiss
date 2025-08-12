@@ -1,4 +1,4 @@
-# 🛏️ Photo Alarm Clock ⏰📸  
+# 🛏️ DETECT-TO-DISMISS ⏰📸  
 > A fun and effective alarm clock that *refuses to snooze* until it sees proof you're awake!
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
